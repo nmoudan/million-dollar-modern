@@ -1,0 +1,890 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "517bb96f5bfe4274b83986fe0a1da551",
+    "packages": [
+        {
+            "name": "composer/installers",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "c29dc4b93137acb82734f672c37e029dfbd95b35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/c29dc4b93137acb82734f672c37e029dfbd95b35",
+                "reference": "c29dc4b93137acb82734f672c37e029dfbd95b35",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "composer/composer": "1.6.* || ^2.0",
+                "composer/semver": "^1 || ^3",
+                "phpstan/phpstan": "^0.12.55",
+                "phpstan/phpstan-phpunit": "^0.12.16",
+                "symfony/phpunit-bridge": "^5.3",
+                "symfony/process": "^5"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Composer\\Installers\\Plugin",
+                "branch-alias": {
+                    "dev-main": "2.x-dev"
+                },
+                "plugin-modifies-install-path": true
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "https://composer.github.io/installers/",
+            "keywords": [
+                "Dolibarr",
+                "Eliasis",
+                "Hurad",
+                "ImageCMS",
+                "Kanboard",
+                "Lan Management System",
+                "MODX Evo",
+                "MantisBT",
+                "Mautic",
+                "Maya",
+                "OXID",
+                "Plentymarkets",
+                "Porto",
+                "RadPHP",
+                "SMF",
+                "Starbug",
+                "Thelia",
+                "Whmcs",
+                "WolfCMS",
+                "agl",
+                "annotatecms",
+                "attogram",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "cockpit",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "eZ Platform",
+                "elgg",
+                "expressionengine",
+                "fuelphp",
+                "grav",
+                "installer",
+                "itop",
+                "known",
+                "kohana",
+                "laravel",
+                "lavalite",
+                "lithium",
+                "magento",
+                "majima",
+                "mako",
+                "matomo",
+                "mediawiki",
+                "miaoxing",
+                "modulework",
+                "modx",
+                "moodle",
+                "osclass",
+                "pantheon",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "processwire",
+                "puppet",
+                "pxcms",
+                "reindex",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "sydes",
+                "sylius",
+                "tastyigniter",
+                "wordpress",
+                "yawik",
+                "zend",
+                "zikula"
+            ],
+            "support": {
+                "issues": "https://github.com/composer/installers/issues",
+                "source": "https://github.com/composer/installers/tree/v2.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-08-20T06:45:11+00:00"
+        },
+        {
+            "name": "satispress/custom-category-widget",
+            "version": "1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://plugins.csf.bc.ca/satispress/custom-category-widget/1.0",
+                "shasum": "f63c7d912eebd0339668a07d24ba36211939016f"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "Saidur Rahman Sujon",
+                "homepage": "http://srsujon.com"
+            },
+            "description": "This is a plugin which will give you facilities for showing your categories at the sidebars of your theme",
+            "homepage": "http://srsujon.com/widgets/custom-cateogry-widget"
+        },
+        {
+            "name": "satispress/custom-post-widget",
+            "version": "3.2.7",
+            "dist": {
+                "type": "zip",
+                "url": "https://plugins.csf.bc.ca/satispress/custom-post-widget/3.2.7",
+                "shasum": "4faf13610da827a80e8a5636c1f0ea00d08eba12"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "Johan van der Wijk",
+                "homepage": "https://vanderwijk.nl"
+            },
+            "description": "Show the content of a custom post of the type 'content_block' in a widget or with a shortcode.",
+            "homepage": "https://vanderwijk.com/wordpress/wordpress-custom-post-widget/?utm_source=wordpress&utm_medium=plugin&utm_campaign=custom_post_widget"
+        },
+        {
+            "name": "satispress/js_composer",
+            "version": "6.13.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://plugins.csf.bc.ca/satispress/js_composer/6.13.0",
+                "shasum": "a0431fae23b6399f920137582019ed0a91e5aac4"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "Michael M - WPBakery.com",
+                "homepage": "http://wpbakery.com"
+            },
+            "description": "Drag and drop page builder for WordPress. Take full control over your WordPress site, build any layout you can imagine – no programming knowledge required.",
+            "homepage": "http://wpbakery.com"
+        },
+        {
+            "name": "satispress/ldap-login-for-intranet-sites",
+            "version": "21.1.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://plugins.csf.bc.ca/satispress/ldap-login-for-intranet-sites/21.1.2",
+                "shasum": "69acbf10b26cacf395a86181af6e4b5883882c51"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "miniorange",
+                "homepage": "http://miniorange.com"
+            },
+            "description": "LDAP/Active Directory Login Plugin provides login to WordPress using credentials stored in your LDAP Server.",
+            "homepage": "http://miniorange.com"
+        },
+        {
+            "name": "satispress/my-plugin",
+            "version": "1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://plugins.csf.bc.ca/satispress/my-plugin/1.0",
+                "shasum": "abd7ec5f958370f27dd1df13774b30e3dbb7210c"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "Naoufal M",
+                "homepage": "http://yourcompany.com"
+            },
+            "description": "This is my extremely awesome WordPress plugin",
+            "homepage": "http://yourplugin.com/"
+        },
+        {
+            "name": "satispress/pages-by-user-role",
+            "version": "1.4.4.83225",
+            "dist": {
+                "type": "zip",
+                "url": "https://plugins.csf.bc.ca/satispress/pages-by-user-role/1.4.4.83225",
+                "shasum": "5b76cd091dfb25030d7fd32114c35d44c6645aeb"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "Alberto Lau & Maxim Levikov (RightHere LLC)",
+                "homepage": "http://plugins.righthere.com"
+            },
+            "description": "Restrict access to different types of content like Pages, Posts, Custom Post Types or Categories depending on which Role the user has. It removes the Pages, Posts or Custom Post Types from search results and blog roll. You can hide Pages and Categories from the menu when the user is not logged in. You can also set a specific redirect URL for users that don't have the required User Role.",
+            "homepage": "http://plugins.righthere.com/pages-by-user-role/"
+        },
+        {
+            "name": "satispress/php-text-widget",
+            "version": "1.0.8",
+            "dist": {
+                "type": "zip",
+                "url": "https://plugins.csf.bc.ca/satispress/php-text-widget/1.0.8",
+                "shasum": "c1bbb0384c0e8d1948d5f3e6a605d6b18ed506af"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "Stefano Lissa",
+                "homepage": "http://www.satollo.net"
+            },
+            "description": "Extends the default WordPress text widget making it able to execute PHP code",
+            "homepage": "http://www.satollo.net/plugins/php-text-widget"
+        },
+        {
+            "name": "satispress/popup-anything-on-click",
+            "version": "2.8",
+            "dist": {
+                "type": "zip",
+                "url": "https://plugins.csf.bc.ca/satispress/popup-anything-on-click/2.8",
+                "shasum": "6268ae3f8c3473ba5ea578d194f7d5286bc14e85"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "WP OnlineSupport, Essential Plugin",
+                "homepage": "https://www.essentialplugin.com/wordpress-plugin/popup-anything-click/"
+            },
+            "description": "Display a modal popup on a page load or by clicking link, image or button. Also work with Gutenberg shortcode block.",
+            "homepage": "https://www.essentialplugin.com/wordpress-plugin/popup-anything-click/"
+        },
+        {
+            "name": "satispress/searchwp",
+            "version": "4.3.10",
+            "dist": {
+                "type": "zip",
+                "url": "https://plugins.csf.bc.ca/satispress/searchwp/4.3.10",
+                "shasum": "233221fbff65845ad6d88b1f2cff757e284fec4d"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "SearchWP",
+                "homepage": "https://searchwp.com/"
+            },
+            "description": "The best WordPress search you can find",
+            "homepage": "https://searchwp.com/"
+        },
+        {
+            "name": "satispress/webnus-core",
+            "version": "1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://plugins.csf.bc.ca/satispress/webnus-core/1.0",
+                "shasum": "4ccc60a48a300bc5fd6f60830c94d470b03d2744"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "Webnus",
+                "homepage": "http://webnus.net"
+            },
+            "description": "Add Webnus Shortcodes & Post types to your WordPress website."
+        },
+        {
+            "name": "wpackagist-plugin/add-descendants-as-submenu-items",
+            "version": "1.2.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/add-descendants-as-submenu-items/",
+                "reference": "tags/1.2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/add-descendants-as-submenu-items.1.2.2.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/add-descendants-as-submenu-items/"
+        },
+        {
+            "name": "wpackagist-plugin/all-in-one-wp-migration",
+            "version": "7.79",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/all-in-one-wp-migration/",
+                "reference": "tags/7.79"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/all-in-one-wp-migration.7.79.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/all-in-one-wp-migration/"
+        },
+        {
+            "name": "wpackagist-plugin/buddypress",
+            "version": "12.1.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/buddypress/",
+                "reference": "tags/12.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/buddypress.12.1.1.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/buddypress/"
+        },
+        {
+            "name": "wpackagist-plugin/buddypress-cover-photo",
+            "version": "1.6.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/buddypress-cover-photo/",
+                "reference": "tags/1.6.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/buddypress-cover-photo.1.6.0.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/buddypress-cover-photo/"
+        },
+        {
+            "name": "wpackagist-plugin/buddypress-members-only",
+            "version": "3.3.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/buddypress-members-only/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/buddypress-members-only.zip?timestamp=1683313447"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/buddypress-members-only/"
+        },
+        {
+            "name": "wpackagist-plugin/classic-editor",
+            "version": "1.6.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/classic-editor/",
+                "reference": "tags/1.6.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/classic-editor.1.6.3.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/classic-editor/"
+        },
+        {
+            "name": "wpackagist-plugin/custom-permalinks",
+            "version": "2.5.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/custom-permalinks/",
+                "reference": "tags/2.5.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/custom-permalinks.2.5.2.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/custom-permalinks/"
+        },
+        {
+            "name": "wpackagist-plugin/custom-post-type-ui",
+            "version": "1.15.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/custom-post-type-ui/",
+                "reference": "tags/1.15.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.15.1.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/custom-post-type-ui/"
+        },
+        {
+            "name": "wpackagist-plugin/custom-post-widget",
+            "version": "3.2.7",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/custom-post-widget/",
+                "reference": "tags/3.2.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/custom-post-widget.3.2.7.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/custom-post-widget/"
+        },
+        {
+            "name": "wpackagist-plugin/duplicator",
+            "version": "1.5.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/duplicator/",
+                "reference": "tags/1.5.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/duplicator.1.5.8.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/duplicator/"
+        },
+        {
+            "name": "wpackagist-plugin/email-address-encoder",
+            "version": "1.0.23",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/email-address-encoder/",
+                "reference": "tags/1.0.23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/email-address-encoder.1.0.23.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/email-address-encoder/"
+        },
+        {
+            "name": "wpackagist-plugin/google-analytics-for-wordpress",
+            "version": "8.23.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
+                "reference": "tags/8.23.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.8.23.1.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/google-analytics-for-wordpress/"
+        },
+        {
+            "name": "wpackagist-plugin/if-menu",
+            "version": "0.17.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/if-menu/",
+                "reference": "tags/0.17.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/if-menu.0.17.0.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/if-menu/"
+        },
+        {
+            "name": "wpackagist-plugin/imsanity",
+            "version": "2.8.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/imsanity/",
+                "reference": "tags/2.8.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/imsanity.2.8.3.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/imsanity/"
+        },
+        {
+            "name": "wpackagist-plugin/loginpress",
+            "version": "3.0.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/loginpress/",
+                "reference": "tags/3.0.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/loginpress.3.0.5.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/loginpress/"
+        },
+        {
+            "name": "wpackagist-plugin/multisite-widgets-context",
+            "version": "1.1.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/multisite-widgets-context/",
+                "reference": "tags/1.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/multisite-widgets-context.1.1.2.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/multisite-widgets-context/"
+        },
+        {
+            "name": "wpackagist-plugin/quick-pagepost-redirect-plugin",
+            "version": "5.2.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/quick-pagepost-redirect-plugin/",
+                "reference": "tags/5.2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/quick-pagepost-redirect-plugin.5.2.4.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/quick-pagepost-redirect-plugin/"
+        },
+        {
+            "name": "wpackagist-plugin/redis-cache",
+            "version": "2.5.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/redis-cache/",
+                "reference": "tags/2.5.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/redis-cache.2.5.0.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/redis-cache/"
+        },
+        {
+            "name": "wpackagist-plugin/restricted-site-access",
+            "version": "7.5.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/restricted-site-access/",
+                "reference": "tags/7.5.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/restricted-site-access.7.5.0.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/restricted-site-access/"
+        },
+        {
+            "name": "wpackagist-plugin/searchwp-live-ajax-search",
+            "version": "1.7.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/searchwp-live-ajax-search/",
+                "reference": "tags/1.7.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/searchwp-live-ajax-search.1.7.6.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/searchwp-live-ajax-search/"
+        },
+        {
+            "name": "wpackagist-plugin/shortcode-ui",
+            "version": "0.7.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/shortcode-ui/",
+                "reference": "tags/0.7.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/shortcode-ui.0.7.4.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/shortcode-ui/"
+        },
+        {
+            "name": "wpackagist-plugin/simple-image-widget",
+            "version": "4.4.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/simple-image-widget/",
+                "reference": "tags/4.4.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/simple-image-widget.4.4.2.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/simple-image-widget/"
+        },
+        {
+            "name": "wpackagist-plugin/stops-core-theme-and-plugin-updates",
+            "version": "9.0.17",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/stops-core-theme-and-plugin-updates/",
+                "reference": "tags/9.0.17"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/stops-core-theme-and-plugin-updates.9.0.17.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/stops-core-theme-and-plugin-updates/"
+        },
+        {
+            "name": "wpackagist-plugin/threewp-broadcast",
+            "version": "50.06",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/threewp-broadcast/",
+                "reference": "tags/50.06"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/threewp-broadcast.50.06.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/threewp-broadcast/"
+        },
+        {
+            "name": "wpackagist-plugin/tinymce-advanced",
+            "version": "5.9.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/tinymce-advanced/",
+                "reference": "tags/5.9.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/tinymce-advanced.5.9.2.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/tinymce-advanced/"
+        },
+        {
+            "name": "wpackagist-plugin/user-role-editor",
+            "version": "4.64.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/user-role-editor/",
+                "reference": "tags/4.64.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/user-role-editor.4.64.1.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/user-role-editor/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-importer",
+            "version": "0.8.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-importer/",
+                "reference": "tags/0.8.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.8.2.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-importer/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-optimize",
+            "version": "3.2.22",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-optimize/",
+                "reference": "tags/3.2.22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-optimize.3.2.22.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-optimize/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-pagenavi",
+            "version": "2.94.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-pagenavi/",
+                "reference": "tags/2.94.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-pagenavi.2.94.1.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-pagenavi/"
+        },
+        {
+            "name": "wpengine/advanced-custom-fields-pro",
+            "version": "6.2.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://connect.advancedcustomfields.com/v2/plugins/composer_download?p=pro&t=6.2.5"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "replace": {
+                "wpackagist-plugin/advanced-custom-fields": "self.version"
+            },
+            "type": "wordpress-plugin"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}

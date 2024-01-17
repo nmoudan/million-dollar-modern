@@ -1,0 +1,4 @@
+.plugins .inactive .plugin-title strong {
+	    font-weight: 400 !important;
+	    color: red !important;
+	}
