@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de9120b4917471d3da4c0c24d2c19c26",
+    "content-hash": "4c1d2dc690c00bb8d9ee38f92b1b7186",
     "packages": [
         {
             "name": "composer/installers",
@@ -378,15 +378,15 @@
         },
         {
             "name": "wpackagist-plugin/buddypress",
-            "version": "12.1.1",
+            "version": "12.2.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/buddypress/",
-                "reference": "tags/12.1.1"
+                "reference": "tags/12.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/buddypress.12.1.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/buddypress.12.2.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -414,7 +414,7 @@
         },
         {
             "name": "wpackagist-plugin/buddypress-members-only",
-            "version": "3.3.3",
+            "version": "3.3.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/buddypress-members-only/",
@@ -422,7 +422,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/buddypress-members-only.zip?timestamp=1683313447"
+                "url": "https://downloads.wordpress.org/plugin/buddypress-members-only.zip?timestamp=1705675587"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
