@@ -59,7 +59,7 @@
         "satispress/popup-anything-on-click": "2.8",
         "satispress/js_composer": "6.13",
         "satispress/webnus-core": "1.0",
-        "satispress/searchwp": "4.3.5",
+        "satispress/searchwp": "4.3.11",
         "satispress/ldap-login-for-intranet-sites": "^21.1"
     },
     "extra": {

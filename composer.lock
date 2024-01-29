@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c1d2dc690c00bb8d9ee38f92b1b7186",
+    "content-hash": "fba0e34e6fa19953092b83556d50dcb3",
     "packages": [
         {
             "name": "composer/installers",
@@ -305,11 +305,11 @@
         },
         {
             "name": "satispress/searchwp",
-            "version": "4.3.5",
+            "version": "4.3.11",
             "dist": {
                 "type": "zip",
-                "url": "https://plugins.csf.bc.ca/satispress/searchwp/4.3.5",
-                "shasum": "5904b6b6e7286bfc791bbec0c7bf574549fceb41"
+                "url": "https://plugins.csf.bc.ca/satispress/searchwp/4.3.11",
+                "shasum": "ca48501dee0b385438680310ccc77d6bfe9fa515"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
