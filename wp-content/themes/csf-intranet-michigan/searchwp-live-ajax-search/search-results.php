@@ -72,7 +72,7 @@ $current_blog_id = get_current_blog_id();
 
 				<div class="searchwp-live-search-result" role="option" id="" aria-selected="false">
 
-					<p><a href="<?php echo $search_result->guid; ?>" target="_blank"><?php echo $PostTitle; ?></a></p>
+					<p><a href="<?php echo $search_result->guid; ?>" target=""><?php echo $PostTitle; ?></a></p>
 
 				</div>
 

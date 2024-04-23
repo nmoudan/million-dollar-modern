@@ -172,7 +172,7 @@ if ( ! empty( $search_query ) && class_exists( '\SearchWP\Query' ) ) {
 
                                 <h2 class="entry-title posts searchtitle">
 
-                                    <a href="<?php echo $search_result->guid; ?>" target="_blank"><?php echo $PostTitle; ?></a>
+                                    <a href="<?php echo $search_result->guid; ?>" target=""><?php echo $PostTitle; ?></a>
 
                                 </h2>
 
