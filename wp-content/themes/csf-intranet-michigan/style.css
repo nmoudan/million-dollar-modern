@@ -2097,6 +2097,9 @@ body.login {
 #responav .wpb_row {
     padding-bottom: 0px;
 }
+#responav li>ul a:not(.button) {
+    padding: 10px 20px;
+}
 
 /** search css **/
 .multisitesearchform{margin-top:35px;position:relative;}
