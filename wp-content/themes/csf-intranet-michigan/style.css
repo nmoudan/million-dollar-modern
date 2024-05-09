@@ -406,7 +406,7 @@
 
 #header.horizontal-w.w-header-type-10 #nav > li > a {color: #002f67; font-weight: 700; font-size: 16px; font-family: 'Dosis',sans-serif;}
 
-.mega > a {padding: 0px 13px !important;}
+/** .mega > a {padding: 0px 13px !important;} **/
 
 .systeme-req:before {font-family: 'FontAwesome';padding-right: 6px;content: "\f15c";color: #ffb300;}
 
@@ -2087,6 +2087,15 @@ body.login {
 
 .clear-both {
     clear: both;
+}
+
+/* #Responsive Menu
+================================================== */
+#responav li .wpb_row [class*=vc_col-] {
+    padding-top: 0px;
+}
+#responav .wpb_row {
+    padding-bottom: 0px;
 }
 
 /** search css **/

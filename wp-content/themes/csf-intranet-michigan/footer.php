@@ -138,6 +138,20 @@ wp_footer(); ?>
     		}	
     	});
     });
+
+		// mobile nav dropdown
+		jQuery(document).ready(function(){
+	    jQuery('#nav-wrap #menu-icon').click(function(){
+	        jQuery('#responav li a .respo-nav-icon').show();
+	    });
+	    jQuery('#responav .menu-item-has-children > a').click(function(event){
+	        event.preventDefault();
+	        jQuery(this).next('.sub-menu').toggleClass('show');
+	        jQuery(this).children('.respo-nav-icon').removeClass('sl-arrow-right');
+	        
+	        jQuery(this).children('.respo-nav-icon').addClass('sl-arrow-down');
+	    });
+	  });
 </script>
 </body>
 </html>
