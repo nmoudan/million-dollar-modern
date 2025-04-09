@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a; /* Dark modern background */
+}
+#gridCanvas {
+    border: 2px solid #00ffcc; /* Neon cyan border */
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5); /* Glow effect */
+}
