@@ -4,9 +4,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #1a1a1a; /* Dark modern background */
+    background-color: #0d0d0d; /* Darker background for Matrix vibe */
+    font-family: 'Courier New', Courier, monospace; /* Matrix font style */
 }
 #gridCanvas {
-    border: 2px solid #00ffcc; /* Neon cyan border */
-    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5); /* Glow effect */
+    border: 2px solid #00ff00; /* Neon green border */
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.7); /* Stronger green glow */
+    background-color: #000000; /* Black Canvas background */
 }
