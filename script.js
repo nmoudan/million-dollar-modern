@@ -1,3 +1,20 @@
+// Import Firebase modules
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
+import { getFirestore, collection, doc, setDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
+
+// Firebase Initialization
+const firebaseConfig = {
+    apiKey: "AIzaSyD7kAuxbDJzHHhF-5UFPUvD8ACuLRE",
+    authDomain: "milliondollarmodern.firebaseapp.com",
+    projectId: "milliondollarmodern",
+    storageBucket: "milliondollarmodern.appspot.com",
+    messagingSenderId: "1384933959990",
+    appId: "1:1384933959990:web:a7db1af24bff77603617",
+    measurementId: "G-KSZ7HTT6Y4"
+};
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
 // Grid Canvas
 const gridCanvas = document.getElementById('gridCanvas');
 const gridCtx = gridCanvas.getContext('2d');
@@ -51,7 +68,8 @@ gridCanvas.addEventListener('mousemove', (event) => {
     gridCtx.fillText('Brand Name', magX + magSize / 2, magY + 2 * magSize / 3);
 });
 
-gridCanvas.addEventListener('click', (event) => {
+// Click to "buy" a square
+gridCanvas.addEventListener('click', async (event) => {
     const rect = gridCanvas.getBoundingClientRect();
     const mouseX = event.clientX - rect.left;
     const mouseY = event.clientY - rect.top;
@@ -59,7 +77,18 @@ gridCanvas.addEventListener('click', (event) => {
     const gridX = Math.floor(mouseX / squareSize);
     const gridY = Math.floor(mouseY / squareSize);
 
-    alert(`You clicked square (${gridX}, ${gridY})! This will be a "Buy" action.`);
+    // Save to Firebase
+    try {
+        await setDoc(doc(collection(db, 'squares'), `${gridX}-${gridY}`), {
+            owner: 'Test User',
+            brandName: 'Test Brand',
+            imageUrl: '',
+            timestamp: serverTimestamp()
+        });
+        alert(`Square (${gridX}, ${gridY}) bought by Test User!`);
+    } catch (error) {
+        console.error('Error buying square: ', error);
+    }
 });
 
 gridCanvas.addEventListener('mouseout', () => {
@@ -83,7 +112,7 @@ const matrixCanvas = document.getElementById('matrixCanvas');
 const matrixCtx = matrixCanvas.getContext('2d');
 
 matrixCanvas.width = window.innerWidth;
-matrixCanvas.height = 150; // Height of the header
+matrixCanvas.height = 150;
 
 const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+-=[]{}|;:,.<>?';
 const fontSize = 14;
