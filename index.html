@@ -14,7 +14,19 @@
             <p>Own a piece of the digital future. Buy a square, display your brand!</p>
         </div>
     </div>
-    <canvas id="gridCanvas"></canvas>
+    <div class="grid-container">
+        <div class="toggle-container">
+            <label class="toggle-switch">
+                <input type="checkbox" id="toggleMode">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <canvas id="gridCanvas"></canvas>
+        <div class="zoom-controls">
+            <button id="zoomIn">+</button>
+            <button id="zoomOut">-</button>
+        </div>
+    </div>
     <script type="module" src="script.js"></script>
 </body>
 </html>
