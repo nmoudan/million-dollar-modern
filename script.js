@@ -19,17 +19,24 @@ const db = getFirestore(app);
 const gridCanvas = document.getElementById('gridCanvas');
 const gridCtx = gridCanvas.getContext('2d');
 
-gridCanvas.width = 500;
-gridCanvas.height = 500;
-const gridSize = 100;
-const squareSize = gridCanvas.width / gridSize;
+// Set canvas size for 190x90 grid, 10x10 pixel squares
+const gridWidth = 190; // 190 squares wide
+const gridHeight = 90; // 90 squares tall
+const squareSize = 10; // 10x10 pixels per square
+gridCanvas.width = gridWidth * squareSize; // 1900 pixels
+gridCanvas.height = gridHeight * squareSize; // 900 pixels
+const pricePerSquare = 58.48; // $58.48 per square
 
 // Zoom variables
 let zoom = 1;
 let offsetX = 0;
 let offsetY = 0;
-const zoomLevels = [1, 1.5, 2, 3, 4, 5];
-let zoomIndex = 0;
+const zoomLevels = [0.5, 1, 1.5, 2];
+let zoomIndex = 1; // Default to zoom = 1
+
+// Panning variables
+let isDragging = false;
+let startX, startY;
 
 // Multi-square selection variables
 let isSelecting = false;
@@ -52,7 +59,7 @@ async function loadOwnedSquares() {
 
 loadOwnedSquares();
 
-// Draw grid with owned squares and selection
+// Draw grid with owned squares, selection, and brand images
 function drawGrid() {
     gridCtx.clearRect(0, 0, gridCanvas.width, gridCanvas.height);
 
@@ -68,13 +75,22 @@ function drawGrid() {
 
     gridCtx.strokeStyle = '#00ff00';
     gridCtx.lineWidth = 0.5 / zoom;
-    for (let x = 0; x < gridSize; x++) {
-        for (let y = 0; y < gridSize; y++) {
+    for (let x = 0; x < gridWidth; x++) {
+        for (let y = 0; y < gridHeight; y++) {
+            // Draw the square outline
+            gridCtx.strokeRect(x * squareSize, y * squareSize, squareSize, squareSize);
+
+            // If the square is owned, display the brand image/placeholder
             if (ownedSquares.has(`${x}-${y}`)) {
                 gridCtx.fillStyle = 'rgba(255, 0, 0, 0.5)';
                 gridCtx.fillRect(x * squareSize, y * squareSize, squareSize, squareSize);
+
+                // Draw placeholder image (white circle)
+                gridCtx.fillStyle = '#ffffff';
+                gridCtx.beginPath();
+                gridCtx.arc(x * squareSize + squareSize / 2, y * squareSize + squareSize / 2, squareSize / 3, 0, Math.PI * 2);
+                gridCtx.fill();
             }
-            gridCtx.strokeRect(x * squareSize, y * squareSize, squareSize, squareSize);
         }
     }
 
@@ -103,12 +119,12 @@ toggleModeInput.addEventListener('change', () => {
     isMultiMode = toggleModeInput.checked;
 });
 
-// Hover effect with dimmed background
+// Hover effect with magnified square
 gridCanvas.addEventListener('mousemove', (event) => {
     gridCtx.clearRect(0, 0, gridCanvas.width, gridCanvas.height);
     drawGrid();
 
-    if (isSelecting) return;
+    if (isSelecting || isDragging) return;
 
     const rect = gridCanvas.getBoundingClientRect();
     const mouseX = (event.clientX - rect.left - offsetX) / zoom;
@@ -117,7 +133,7 @@ gridCanvas.addEventListener('mousemove', (event) => {
     const gridX = Math.floor(mouseX / squareSize);
     const gridY = Math.floor(mouseY / squareSize);
 
-    if (gridX >= 0 && gridX < gridSize && gridY >= 0 && gridY < gridSize) {
+    if (gridX >= 0 && gridX < gridWidth && gridY >= 0 && gridY < gridHeight) {
         const magSize = 100 / zoom;
         const magX = gridX * squareSize - (magSize - squareSize) / 2;
         const magY = gridY * squareSize - (magSize - squareSize) / 2;
@@ -142,14 +158,8 @@ gridCanvas.addEventListener('mousemove', (event) => {
         // Placeholder image (white circle)
         gridCtx.fillStyle = '#ffffff';
         gridCtx.beginPath();
-        gridCtx.arc(magX + magSize / 2, magY + magSize / 3, magSize / 6, 0, Math.PI * 2);
+        gridCtx.arc(magX + magSize / 2, magY + magSize / 2, magSize / 3, 0, Math.PI * 2);
         gridCtx.fill();
-
-        // Placeholder text
-        gridCtx.font = `${12 / zoom}px Courier New`;
-        gridCtx.fillStyle = '#00ff00';
-        gridCtx.textAlign = 'center';
-        gridCtx.fillText('Brand Name', magX + magSize / 2, magY + 2 * magSize / 3);
 
         gridCtx.restore();
     }
@@ -175,35 +185,46 @@ zoomOutButton.addEventListener('click', () => {
     }
 });
 
-// Mouse down for selection
+// Mouse down for panning or selection
 let clickStartTime;
 gridCanvas.addEventListener('mousedown', (event) => {
     clickStartTime = Date.now();
+    if (!isMultiMode && clickStartTime < 1000) {
+        isDragging = true;
+        startX = event.clientX - offsetX;
+        startY = event.clientY - offsetY;
+    }
 });
 
-// Mouse move for selection
+// Mouse move for panning or selection
 gridCanvas.addEventListener('mousemove', (event) => {
     const rect = gridCanvas.getBoundingClientRect();
     const mouseX = (event.clientX - rect.left - offsetX) / zoom;
     const mouseY = (event.clientY - rect.top - offsetY) / zoom;
 
-    if (isSelecting) {
+    if (isDragging) {
+        offsetX = event.clientX - startX;
+        offsetY = event.clientY - startY;
+        drawGrid();
+    } else if (isSelecting) {
         selectionEndX = Math.floor(mouseX / squareSize);
         selectionEndY = Math.floor(mouseY / squareSize);
-        selectionEndX = Math.max(0, Math.min(selectionEndX, gridSize - 1));
-        selectionEndY = Math.max(0, Math.min(selectionEndY, gridSize - 1));
+        selectionEndX = Math.max(0, Math.min(selectionEndX, gridWidth - 1));
+        selectionEndY = Math.max(0, Math.min(selectionEndY, gridHeight - 1));
         drawGrid();
     }
 });
 
-// Mouse up for single square purchase or multi-square selection
+// Mouse up for panning, single square purchase, or multi-square selection
 gridCanvas.addEventListener('mouseup', async (event) => {
     const clickDuration = Date.now() - clickStartTime;
     const rect = gridCanvas.getBoundingClientRect();
     const mouseX = (event.clientX - rect.left - offsetX) / zoom;
     const mouseY = (event.clientY - rect.top - offsetY) / zoom;
 
-    if (isMultiMode || clickDuration >= 1000) {
+    if (isDragging) {
+        isDragging = false;
+    } else if (isMultiMode || clickDuration >= 1000) {
         // Start multi-square selection
         if (!isSelecting) {
             isSelecting = true;
@@ -238,7 +259,7 @@ gridCanvas.addEventListener('mouseup', async (event) => {
                 return;
             }
 
-            const totalPrice = selectedSquares.length * 100;
+            const totalPrice = (selectedSquares.length * pricePerSquare).toFixed(2);
             const confirmPurchase = confirm(`You selected ${selectedSquares.length} squares. Total price: $${totalPrice}. Confirm purchase?`);
 
             if (confirmPurchase) {
@@ -248,10 +269,10 @@ gridCanvas.addEventListener('mouseup', async (event) => {
                             owner: 'Test User',
                             brandName: 'Test Brand',
                             imageUrl: '',
-                            price: 100,
+                            price: pricePerSquare,
                             timestamp: serverTimestamp()
                         });
-                        ownedSquares.set(`${square.x}-${square.y}`, { owner: 'Test User', brandName: 'Test Brand', price: 100 });
+                        ownedSquares.set(`${square.x}-${square.y}`, { owner: 'Test User', brandName: 'Test Brand', price: pricePerSquare });
                     }
                     alert(`Purchased ${selectedSquares.length} squares for $${totalPrice}!`);
                     drawGrid();
@@ -267,7 +288,7 @@ gridCanvas.addEventListener('mouseup', async (event) => {
         const gridX = Math.floor(mouseX / squareSize);
         const gridY = Math.floor(mouseY / squareSize);
 
-        if (gridX >= 0 && gridX < gridSize && gridY >= 0 && gridY < gridSize) {
+        if (gridX >= 0 && gridX < gridWidth && gridY >= 0 && gridY < gridHeight) {
             if (ownedSquares.has(`${gridX}-${gridY}`)) {
                 alert('This square is already owned!');
                 return;
@@ -278,11 +299,11 @@ gridCanvas.addEventListener('mouseup', async (event) => {
                     owner: 'Test User',
                     brandName: 'Test Brand',
                     imageUrl: '',
-                    price: 100,
+                    price: pricePerSquare,
                     timestamp: serverTimestamp()
                 });
-                ownedSquares.set(`${gridX}-${gridY}`, { owner: 'Test User', brandName: 'Test Brand', price: 100 });
-                alert(`Square (${gridX}, ${gridY}) bought by Test User for $100!`);
+                ownedSquares.set(`${gridX}-${gridY}`, { owner: 'Test User', brandName: 'Test Brand', price: pricePerSquare });
+                alert(`Square (${gridX}, ${gridY}) bought by Test User for $${pricePerSquare.toFixed(2)}!`);
                 drawGrid();
             } catch (error) {
                 console.error('Error buying square: ', error);
@@ -293,6 +314,7 @@ gridCanvas.addEventListener('mouseup', async (event) => {
 
 gridCanvas.addEventListener('mouseout', () => {
     isSelecting = false;
+    isDragging = false;
     gridCtx.clearRect(0, 0, gridCanvas.width, gridCanvas.height);
     drawGrid();
 });

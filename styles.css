@@ -40,14 +40,22 @@ p {
 }
 .grid-container {
     position: relative;
-    margin: 20px 0;
+    margin: 0;
+    width: 100%;
+    height: calc(100vh - 150px);
+    overflow: auto;
 }
 .toggle-container {
     position: absolute;
-    top: -40px;
-    right: 0;
+    top: 10px;
+    right: 10px;
     display: flex;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+    z-index: 10;
 }
 .toggle-switch {
     position: relative;
