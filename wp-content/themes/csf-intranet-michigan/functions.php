@@ -754,6 +754,26 @@ function my_search_media_direct_link( $permalink, $post = null ) {
 add_filter( 'the_permalink',   'my_search_media_direct_link', 99, 2 );
 add_filter( 'attachment_link', 'my_search_media_direct_link', 99, 2 );
 
+add_filter('doing_it_wrong_trigger_error', '__return_false');
+
+
+/**
+ * Enable unfiltered_html capability for Editors.
+ *
+ * @param  array  $caps    The user's capabilities.
+ * @param  string $cap     Capability name.
+ * @param  int    $user_id The user ID.
+ * @return array  $caps    The user's capabilities, with 'unfiltered_html' potentially added.
+ */
+function km_add_unfiltered_html_capability_to_editors( $caps, $cap, $user_id ) {
+
+	if ( 'unfiltered_html' === $cap && user_can( $user_id, 'shop_manager' ) ) {
+		$caps = [ 'unfiltered_html' ];
+	}
+
+	return $caps;
+}
+add_filter( 'map_meta_cap', 'km_add_unfiltered_html_capability_to_editors', 1, 3 );
 
 // function handle_wp_nav_menu($arg) {
 //     return wp_multisite_nav_menu($arg);
