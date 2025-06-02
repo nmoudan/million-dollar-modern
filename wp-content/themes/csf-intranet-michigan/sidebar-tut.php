@@ -12,7 +12,7 @@
     $taxonomy2 = str_replace('_',' ',$taxonomy);
     // Gets every "category" (term) in this taxonomy to get the respective posts
     $termsonemainorder = get_the_terms( $post->ID, $taxonomy );
-    $termsone = array_reverse($termsonemainorder, true);
+    $termsone = is_array($termsonemainorder) ? array_reverse($termsonemainorder, true) : [];
    // var_dump($queried_object);
     foreach( $termsone as $termone ) : ?>
     <style type="text/css">
