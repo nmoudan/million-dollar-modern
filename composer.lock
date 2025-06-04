@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "227b14310fc37343d32771613595a16d",
+    "content-hash": "934f1f01518198cd104f9bacda948b31",
     "packages": [
         {
             "name": "composer/installers",
@@ -173,11 +173,11 @@
         },
         {
             "name": "satispress/custom-post-widget",
-            "version": "3.2.7",
+            "version": "3.3.0",
             "dist": {
                 "type": "zip",
-                "url": "https://plugins.csf.bc.ca/satispress/custom-post-widget/3.2.7",
-                "shasum": "4faf13610da827a80e8a5636c1f0ea00d08eba12"
+                "url": "https://plugins.csf.bc.ca/satispress/custom-post-widget/3.3.0",
+                "shasum": "436e5a08a0811e8c0e634091d610056759caf801"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -208,25 +208,6 @@
             },
             "description": "Drag and drop page builder for WordPress. Take full control over your WordPress site, build any layout you can imagine – no programming knowledge required.",
             "homepage": "https://wpbakery.com"
-        },
-        {
-            "name": "satispress/ldap-login-for-intranet-sites",
-            "version": "21.1.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://plugins.csf.bc.ca/satispress/ldap-login-for-intranet-sites/21.1.2",
-                "shasum": "69acbf10b26cacf395a86181af6e4b5883882c51"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": {
-                "name": "miniorange",
-                "homepage": "http://miniorange.com"
-            },
-            "description": "LDAP/Active Directory Login Plugin provides login to WordPress using credentials stored in your LDAP Server.",
-            "homepage": "http://miniorange.com"
         },
         {
             "name": "satispress/my-plugin",
@@ -287,11 +268,11 @@
         },
         {
             "name": "satispress/popup-anything-on-click",
-            "version": "2.8.6",
+            "version": "2.8.8",
             "dist": {
                 "type": "zip",
-                "url": "https://plugins.csf.bc.ca/satispress/popup-anything-on-click/2.8.6",
-                "shasum": "8e869c8ae0677888bc0ebd0337ed6aa2baa1192f"
+                "url": "https://plugins.csf.bc.ca/satispress/popup-anything-on-click/2.8.8",
+                "shasum": "59164c14205adad63a222d5d02eff1cba038ff6b"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -379,24 +360,6 @@
             "homepage": "https://wordpress.org/plugins/add-descendants-as-submenu-items/"
         },
         {
-            "name": "wpackagist-plugin/all-in-one-wp-migration",
-            "version": "7.93",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/all-in-one-wp-migration/",
-                "reference": "tags/7.93"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/all-in-one-wp-migration.7.93.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/all-in-one-wp-migration/"
-        },
-        {
             "name": "wpackagist-plugin/buddypress",
             "version": "14.3.4",
             "source": {
@@ -470,15 +433,15 @@
         },
         {
             "name": "wpackagist-plugin/custom-permalinks",
-            "version": "2.7.0",
+            "version": "2.8.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/custom-permalinks/",
-                "reference": "tags/2.7.0"
+                "reference": "tags/2.8.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/custom-permalinks.2.7.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/custom-permalinks.2.8.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -488,15 +451,15 @@
         },
         {
             "name": "wpackagist-plugin/custom-post-type-ui",
-            "version": "1.17.2",
+            "version": "1.17.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/custom-post-type-ui/",
-                "reference": "tags/1.17.2"
+                "reference": "tags/1.17.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.17.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.17.3.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -506,39 +469,21 @@
         },
         {
             "name": "wpackagist-plugin/custom-post-widget",
-            "version": "3.3.7",
+            "version": "3.3.8",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/custom-post-widget/",
-                "reference": "tags/3.3.7"
+                "reference": "tags/3.3.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/custom-post-widget.3.3.7.zip"
+                "url": "https://downloads.wordpress.org/plugin/custom-post-widget.3.3.8.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/custom-post-widget/"
-        },
-        {
-            "name": "wpackagist-plugin/document-library-lite",
-            "version": "1.1.3",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/document-library-lite/",
-                "reference": "tags/1.1.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/document-library-lite.1.1.3.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/document-library-lite/"
         },
         {
             "name": "wpackagist-plugin/duplicator",
@@ -578,15 +523,15 @@
         },
         {
             "name": "wpackagist-plugin/google-analytics-for-wordpress",
-            "version": "9.4.1",
+            "version": "9.5.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
-                "reference": "tags/9.4.1"
+                "reference": "tags/9.5.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.9.4.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.9.5.3.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -632,15 +577,15 @@
         },
         {
             "name": "wpackagist-plugin/loginpress",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/loginpress/",
-                "reference": "tags/4.0.0"
+                "reference": "tags/4.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/loginpress.4.0.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/loginpress.4.0.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -665,24 +610,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/multisite-widgets-context/"
-        },
-        {
-            "name": "wpackagist-plugin/next-active-directory-integration",
-            "version": "3.1.9",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/next-active-directory-integration/",
-                "reference": "tags/3.1.9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/next-active-directory-integration.3.1.9.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/next-active-directory-integration/"
         },
         {
             "name": "wpackagist-plugin/quick-pagepost-redirect-plugin",
@@ -722,15 +649,15 @@
         },
         {
             "name": "wpackagist-plugin/restricted-site-access",
-            "version": "7.5.2",
+            "version": "7.5.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/restricted-site-access/",
-                "reference": "tags/7.5.2"
+                "reference": "tags/7.5.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/restricted-site-access.7.5.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/restricted-site-access.7.5.3.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -740,15 +667,15 @@
         },
         {
             "name": "wpackagist-plugin/searchwp-live-ajax-search",
-            "version": "1.8.5",
+            "version": "1.8.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/searchwp-live-ajax-search/",
-                "reference": "tags/1.8.5"
+                "reference": "tags/1.8.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/searchwp-live-ajax-search.1.8.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/searchwp-live-ajax-search.1.8.6.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -812,15 +739,15 @@
         },
         {
             "name": "wpackagist-plugin/threewp-broadcast",
-            "version": "51.04",
+            "version": "51.06",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/threewp-broadcast/",
-                "reference": "tags/51.04"
+                "reference": "tags/51.06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/threewp-broadcast.51.04.zip"
+                "url": "https://downloads.wordpress.org/plugin/threewp-broadcast.51.06.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -848,15 +775,15 @@
         },
         {
             "name": "wpackagist-plugin/user-role-editor",
-            "version": "4.64.4",
+            "version": "4.64.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/user-role-editor/",
-                "reference": "tags/4.64.4"
+                "reference": "tags/4.64.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/user-role-editor.4.64.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/user-role-editor.4.64.5.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -884,15 +811,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-optimize",
-            "version": "4.1.1",
+            "version": "4.2.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-optimize/",
-                "reference": "tags/4.1.1"
+                "reference": "tags/4.2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-optimize.4.1.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-optimize.4.2.2.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -920,15 +847,15 @@
         },
         {
             "name": "wpackagist-plugin/wpo365-login",
-            "version": "36.0",
+            "version": "36.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wpo365-login/",
-                "reference": "tags/36.0"
+                "reference": "tags/36.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wpo365-login.36.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/wpo365-login.36.2.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -938,10 +865,10 @@
         },
         {
             "name": "wpengine/advanced-custom-fields-pro",
-            "version": "6.4.0.1",
+            "version": "6.4.2",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/v2/plugins/composer_download?s=composer&p=pro&t=6.4.0.1"
+                "url": "https://connect.advancedcustomfields.com/v2/plugins/composer_download?s=composer&p=pro&t=6.4.2"
             },
             "require": {
                 "composer/installers": "~1.0 || ~2.0"
