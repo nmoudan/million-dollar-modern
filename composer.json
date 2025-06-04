@@ -50,7 +50,6 @@
         "wpackagist-plugin/wordpress-importer": "^0.8",
         "wpackagist-plugin/wp-optimize": "^4.2",
         "wpackagist-plugin/wp-pagenavi": "^2.94",
-        "satispress/custom-post-widget": "3.3",
         "satispress/custom-category-widget": "1.0",
         "satispress/my-plugin": "1.0",
         "satispress/php-text-widget": "^1.0",

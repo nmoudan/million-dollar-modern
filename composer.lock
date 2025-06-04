@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "934f1f01518198cd104f9bacda948b31",
+    "content-hash": "ca3b7189aec28d6934c5dc8a244459b8",
     "packages": [
         {
             "name": "composer/installers",
@@ -170,25 +170,6 @@
             },
             "description": "This is a plugin which will give you facilities for showing your categories at the sidebars of your theme",
             "homepage": "http://srsujon.com/widgets/custom-cateogry-widget"
-        },
-        {
-            "name": "satispress/custom-post-widget",
-            "version": "3.3.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://plugins.csf.bc.ca/satispress/custom-post-widget/3.3.0",
-                "shasum": "436e5a08a0811e8c0e634091d610056759caf801"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": {
-                "name": "Johan van der Wijk",
-                "homepage": "https://vanderwijk.nl"
-            },
-            "description": "Show the content of a custom post of the type 'content_block' in a widget or with a shortcode.",
-            "homepage": "https://vanderwijk.com/wordpress/wordpress-custom-post-widget/?utm_source=wordpress&utm_medium=plugin&utm_campaign=custom_post_widget"
         },
         {
             "name": "satispress/js_composer",
