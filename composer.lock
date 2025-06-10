@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ca3b7189aec28d6934c5dc8a244459b8",
+    "content-hash": "dc17fff8316163725d35b5f4861f2478",
     "packages": [
         {
             "name": "composer/installers",
@@ -173,11 +173,11 @@
         },
         {
             "name": "satispress/js_composer",
-            "version": "6.13.0",
+            "version": "8.1",
             "dist": {
                 "type": "zip",
-                "url": "https://plugins.csf.bc.ca/satispress/js_composer/6.13.0",
-                "shasum": "a0431fae23b6399f920137582019ed0a91e5aac4"
+                "url": "https://plugins.csf.bc.ca/satispress/js_composer/8.1",
+                "shasum": "42777aa4f60c113620dd92b74341ba9f862803a1"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"

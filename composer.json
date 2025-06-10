@@ -55,7 +55,7 @@
         "satispress/php-text-widget": "^1.0",
         "satispress/pages-by-user-role": "^1.7",
         "satispress/popup-anything-on-click": "^2.8",
-        "satispress/js_composer": "6.13",
+        "satispress/js_composer": "^8.",
         "satispress/webnus-core": "1.0",
         "satispress/searchwp": "4.3.11",
         "wpackagist-plugin/wpo365-login": "^36.2",

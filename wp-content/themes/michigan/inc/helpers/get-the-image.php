@@ -284,6 +284,13 @@ final class Get_The_Image {
 	 */
 	public function find() {
 
+		// Loop through each key in $this->args and ensure the corresponding variable exists
+		foreach (array_keys($this->args) as $key) {
+		    if (!isset($$key)) {
+		        $$key = null;  // Set default value if the variable is not set
+		    }
+		}
+
 		/* Get cache key based on $this->args. */
 		$key = md5( serialize( compact( array_keys( $this->args ) ) ) );
 

@@ -13,7 +13,7 @@ include_once get_template_directory() . '/inc/helpers/show-ids.php';
 include_once get_template_directory() . '/inc/plugins/woocommerce/index.php';
 include_once get_template_directory() . '/inc/plugins/plugin-activator/init.php';
 include_once get_template_directory() . '/inc/plugins/taxonomy-icons/taxonomy-icons.php';
-include_once get_template_directory() . '/inc/plugins/sweet-custom-menu/sweet-custom-menu.php';
+// include_once get_template_directory() . '/inc/plugins/sweet-custom-menu/sweet-custom-menu.php';
 
 include_once get_template_directory() . '/inc/meta-box/meta-box.php';
 include_once get_template_directory() . '/inc/meta-box/webnus-meta-box.php';
