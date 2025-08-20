@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Million Dollar Modern</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Import a modern font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="header-content">
+            <h1>Million Dollar Modern</h1>
+            <p>Own a piece of digital history</p>
+        </div>
+        <div class="header-actions">
+            <div id="userInfo">
+                <button id="loginButton">Log In</button>
+                <button id="logoutButton" style="display: none;">Log Out</button>
+                <div id="userDisplay"></div>
+                <div id="loginForm" style="display: none;">
+                    <input type="email" id="emailInput" placeholder="Email">
+                    <input type="password" id="passwordInput" placeholder="Password">
+                    <button id="submitLogin">Submit</button>
+                    <button id="cancelLogin">Cancel</button>
+                </div>
+            </div>
+            <button id="buyNowButton" class="cta-button">Buy Now</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Top Controls -->
+        <div id="topControls">
+            <div id="uploadSection" style="display: none;">
+                <label for="imageUpload" id="uploadLabel">Upload Image:</label>
+                <input type="file" id="imageUpload" accept="image/*">
+                <button id="uploadButton">Upload</button>
+            </div>
+            <div id="toggleSection">
+                <input type="checkbox" id="toggleMode">
+                <label for="toggleMode">Multi-Block Mode</label>
+            </div>
+        </div>
+
+        <!-- Grid Container -->
+        <div id="gridContainer">
+            <canvas id="gridCanvas"></canvas>
+            <div id="loadingIndicator">Loading...</div>
+        </div>
+    </main>
+
+    <!-- Matrix Background Canvas -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- JavaScript -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
